@@ -3,7 +3,7 @@ import string
 import torch
 
 # we can use "_" to represent any character out-of-vocabulary, that is, any character our model will not handle.
-allowed_characters = string.ascii_letters + ".,;'" + "_"
+allowed_characters = string.ascii_letters + " .,;'" + "_"
 n_letters = len(allowed_characters)
 
 

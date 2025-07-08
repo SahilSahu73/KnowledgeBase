@@ -56,15 +56,3 @@ class NamesDataset(Dataset):
         label_tensor = self.labels_tensors[idx]
 
         return label_tensor, data_tensor, data_label, data_item
-
-
-if __name__ == '__main__':
-
-    # checking the dataset
-    all_Data = NamesDataset(DATA_DIR)
-    print(f"loaded {len(all_Data)} items of data.")
-    print(f"example: {all_Data[0]}")
-    print(f"Labels list: {all_Data.labels_uniq}")
-
-    train_set, test_set = torch.utils.data.random_split(all_Data, [.85, .15])
-    print(f"train examples = {len(train_set)}, validation examples = {len(test_set)}")
