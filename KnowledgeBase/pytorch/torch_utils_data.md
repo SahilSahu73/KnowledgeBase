@@ -1,5 +1,5 @@
-# torch.utils.data [^1]
-[^1] In this module I will be studying more about torch.utils.data features and a little bit about how it works.
+# torch.utils.data 
+In this module I will be studying more about torch.utils.data features and a little bit about how it works.
 
 Heart of the PyTorch data loading utility - `torch.utils.data.DataLoader` class.
 It represents a Python iterable over a dataset with support for:
@@ -15,7 +15,8 @@ DataLoader(dataset, batch_size=1, shuffle=False, sampler=None,
            batch_sampler=None, num_workers=0, collate_fn=None,
            pin_memory=False, drop_last=False, timeout=0,
            worker_init_fn=None, *, prefetch_factor=2,
-           persistent_workers=False)```
+           persistent_workers=False)
+```
 
 
 ### Dataset Types
