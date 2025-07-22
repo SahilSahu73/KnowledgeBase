@@ -6,8 +6,6 @@ import time
 from torch.utils.data import Dataset
 from preprocessing import lineToTensor
 
-DATA_DIR = "data/names"
-
 # check if GPU available otherwise use CPU
 device = torch.device('cpu')
 if torch.cuda.is_available():
