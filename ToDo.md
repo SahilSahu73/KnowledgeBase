@@ -2,6 +2,31 @@ The overall objective of this 'to do' list is to come up with a Problem Statemen
 The problem statements can be bottom-up or up-bottom. The problem statement should give a commercial and tactical advancement to the company
 Define the problem statement from the perspective of "Can we do this or can we do this better?"
 
+Apart from well developed and researched products and technology but as well as hand over of projects.
+Ideally the timeline is 4 to 6 months.
+Afte that it would be considered waste products.
+We save there reseach time and solve business problems
+KRA - Key Result Area
+KPI - calculation method or indicator of KRA
+
+Perspective - the contribution in different departments
+vxlan and gre
+
+Research areas:
+
+Infra level:
+linux os
+hypervisor kvm
+CSI (containers storage interface)
+File systems
+
+Service Layer:
+Software engineering challenges
+concurrency
+par
+Can AI fit into this
+Intelligent schedular
+
 
 1. - [ ] Pytorch:
         a. - [ ] torch.nn
@@ -14,18 +39,22 @@ Define the problem statement from the perspective of "Can we do this or can we d
 
 3. - [ ] Git Tutorials through the documentation
 4. - [ ] Gitlab overview and functionalities.
-5. - [ ] Fundamentals of Data Engineering - Book by Joe Reis and Matt Housley - go through the imp topics and just fast read everything
-6. - [ ] Log analysis - have to research with yashwanth and find a way to implement it:
-        a. - [ ] Read the [salesforce LogAI paper and github repo](https://github.com/salesforce/logai)
-                - We should know different methods for different tasks
-                - outputs we are receiving
-                - how can we modify it for different types of logs -> the amount fo customizability 
-        b. - [ ] Log-Correlation survey paper some new purpose from logs -> [paper link](https://ieeexplore.ieee.org/document/9996392)
-        c. - [ ] LogM - log analysis for Multiple components of hadoop platform - amazing architecture - [paper link](https://ieeexplore.ieee.org/document/9420108)
-        d. - [ ] Approach to cloud execution failure diagnosis based on exception logs in openstack
-
-7. - [ ] FastAPI - go through documentation thoroughly and how to deploy for exposing my models. 
-8. - [ ] AIOps, MLOps, LLMOps - basically all ops that will be used for shipping AI models.
+5. - [ ] (optional) Fundamentals of Data Engineering - Book by Joe Reis and Matt Housley - go through the imp topics and just fast read.
+6. - [ ] FastAPI - go through documentation thoroughly and how to deploy for exposing my models. 
+7. - [ ] AIOps, MLOps, LLMOps - basically all ops that will be used for shipping AI models.
 
 data lake + data warehouse = delta lake (lake house)
 
+
+
+Kortex or suna, open-source, uses supabase
+
+1. LLM innferencing (scaling and accelerating) - vLLM, LLM-d, Mojo
+involves -k8s, ollama(benchmarked on docker)
+
+look into open problem statements and clean it as well.
+2. level up on these non-functional requirements:
+- virtualization => aware on hypervisors, k8s, docker containers
+- linux
+- networking
+- system design

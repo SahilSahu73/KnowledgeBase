@@ -1,3 +1,11 @@
+---
+title: "__init__"
+date: "2025-08-26"
+unique_id: "08aa570a9191ac42aa512102dcc6ea3ffa1d478ec83618c8cc670a6c6c2782a7"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 # Quickstart on Pytorch and getting to know about the basic functions
 
 Pytorch has 2 primitives to work with data `torch.utils.data.Dataset` and `torch.utils.data.DataLoader`

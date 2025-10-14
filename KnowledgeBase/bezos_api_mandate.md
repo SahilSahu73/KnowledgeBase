@@ -1,3 +1,11 @@
+---
+title: "bezos_api_mandate"
+date: "2025-08-26"
+unique_id: "65cc7c03e7c816350601c978759c4ee184d95018de506da0dc00ab60969ab996"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 # Bezos API Mandate
 reference - https://nordicapis.com/the-bezos-api-mandate-amazons-manifesto-for-externalization/
 

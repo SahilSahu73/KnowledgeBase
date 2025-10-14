@@ -1,3 +1,11 @@
+---
+title: "torch_utils_data"
+date: "2025-08-26"
+unique_id: "43f479c8e550768fa192ec60fa04d42d3cfe83a21b6a73ba5c01cfcd8dd07843"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 # torch.utils.data 
 In this module I will be studying more about torch.utils.data features and a little bit about how it works.
 
@@ -104,6 +112,20 @@ as values.
 
 users may customize `collate_fn` to achieve custom batching, e.g., collating along a dimension other than the first, padding sequences of
 various length, or adding support for custom data types.
+
+
+### IMPORTANT NOTE:
+DataLoader uses `torch.stack()` by default to collate a batch from the list of samples provided. This requires **all tensors in a batch to be of
+the same shape.** If each sample is of varying lengths then `torch.stack()` will fail with:
+`RuntimeError: stack expects each tensor to be equal size …`
+
+There are 2 ways to solve this problem:
+1. **pad sequence to the same length per batch**, using:
+    - `collate_fn` that pads (e.g., with zeros or a PAD token) to match the longest subsequence in the batch.
+    - use `torch.nn.utils.rnn.pad_sequence()` and `pack_padded_sequence()` in model
+
+2. **use custom batching**:
+    - create batches where all examples share the same length. (would not recommend to do this.)
 
 
 ### Single and Multi-process Data Loading

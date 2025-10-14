@@ -1,3 +1,11 @@
+---
+title: "lua_tutorial"
+date: "2025-08-26"
+unique_id: "248de80353f9a4a11df31caebdf9389a11e86050d929bbe589005c9e360e70a1"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 ```lua
 
 --[[

@@ -1,3 +1,11 @@
+---
+title: "Tensors"
+date: "2025-08-26"
+unique_id: "819423616caab7306f7d0fc329af9a90c6cc32131ef8aa0d15b3323afadddfc1"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 # Tensors
 
 ### Initializing Tensors

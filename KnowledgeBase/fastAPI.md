@@ -1,3 +1,11 @@
+---
+title: "fastAPI"
+date: "2025-08-26"
+unique_id: "ab32249e7468100e3d0392809b04f0d1a459dfff769f6dcc9ba544ffe48031fa"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 ## I. Python Type Hints
 They will be used alot in FastAPI
 

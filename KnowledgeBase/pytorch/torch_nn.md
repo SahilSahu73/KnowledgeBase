@@ -1,3 +1,11 @@
+---
+title: "torch_nn"
+date: "2025-08-26"
+unique_id: "036840c290f4ce095d8d8de3b10033fc1e4e623a756e6f25e7bff979338a9150"
+author: "AutoMigrationScript"
+tags: []
+description: ""
+---
 # torch.nn
 All the contents of torch.nn that I should know about properly and links to other stuff.
 
@@ -157,7 +165,7 @@ Also straight forward to apply to RNNs by computing the normalization statistics
 hidden state dynamics in RNN. 
 
 So instead of computing mean and variance for each minibatch, we compute the mean and variance for each layer:
-mean^l^ = 1/H summation from i=1 to H (a^l^) [image of formula](./LayerNorm_mean_var_formula.png)
+mean^l^ = 1/H summation from i=1 to H (a^l^) ![image of formula](./LayerNorm_mean_var_formula.png)
 
 All the hidden units in a layer share the same normalization terms, but different training cases have different normalization terms.
 It also does not impose any constraint on the size of a mini-batch, we can have batch size 1.
@@ -174,7 +182,7 @@ here gamma and beta are the learnable affine transform parameters of normalized_
 
 6. [Recurrent Layers](https://docs.pytorch.org/docs/stable/nn.html#recurrent-layers):
 
-*`nn.RNNBase(mode, input_size, hidden_size, num_layers=1, bias=True, ....)`*
+`nn.RNNBase(mode, input_size, hidden_size, num_layers=1, bias=True, ....)`
 Base class for RNN modules (RNN, LSTM, GRU)
 Implements aspects of RNNs shared by the RNN, LSTM, and GRU classes, such as module initialization and utility methods for parameter storage
 management.
