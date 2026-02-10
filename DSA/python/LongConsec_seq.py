@@ -1,0 +1,2 @@
+def longestConsecutiveSequence(nums: list):
+
