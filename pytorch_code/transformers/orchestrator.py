@@ -20,5 +20,16 @@ if __name__ == "__main__":
     attn = MultiHeadSelfAttention(d_model, n_head, trace_shapes=True)
 
     logger.info(f"Input x: {tuple(x.shape)} = (B, T, d_model)")
-    qkv = attn.qkv(x)  # (B, T, 3*d_model), here the 3 is multiplied
+    qkv = attn.qkv(x)  # (B, T, 3*d_model) is returned, which represents q, k and v matrices concatenated.
     logger.info(f"Linear qkv(x): {tuple(qkv.shape)} = (B, T, 3*d_model)")
+
+    qkv = qkv.view(B, T, 3, n_head, d_head)
+    logger.info(f"view to 5D: {tuple(qkv.shape)} = (B, T, 3, n_head, d_head)")
+
+    q, k, v = qkv.unbind(dim=2)
+    logger.info(f"q,k,v split:  q={tuple(q.shape)} k={tuple(k.shape)} v={tuple(v.shape)}")
+
+    q = q.transpose(1, 2)
+    k = k.transpose(1, 2)
+    v = v.transpose(1, 2)
+    logger.info(f"Transpose heads: q = {q.shape}")

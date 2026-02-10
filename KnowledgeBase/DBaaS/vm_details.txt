@@ -1,0 +1,15 @@
+Sahil's VM:
+VM ip - 172.16.21.67 -p 5522
+VM2 ip = 172.16.21.73 -p 5522
+(both in Prod)
+
+Dev:
+10.14.21.122(10.14.21.40) administrator@vsphere.local  supp0rt$ESDS@24
+
+Prod:
+10.14.21.90 administrator@vsphere.local  supp0rt$ESDS
+
+
+Prasham's VM:
+1. VM2 ip - 172.16.21.33 -p 5522
+2. VM ip - 172.16.21.68 -p 5522

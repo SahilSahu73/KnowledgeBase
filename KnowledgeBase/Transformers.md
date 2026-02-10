@@ -21,7 +21,7 @@ At it's core it contains stack of encoder layers and decoder layers.
 ![Abstract transformer architecture in the form of encoder and decoder blocks](./images/Transformers1.png)
 
 The encoder stack and decoder stack each have their corresponding Embedding layers for their respective inputs.
-Follwed with an output layer to generate the final output.
+Followed with an output layer to generate the final output.
 All encoders and decoders are identical to one another.
 
 - Encoder contains the self-attention layer that computes the relationship between different words in the sequence, and feed-forward layer.
