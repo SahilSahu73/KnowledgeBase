@@ -1,11 +1,3 @@
----
-title: "fastAPI"
-date: "2025-08-26"
-unique_id: "ab32249e7468100e3d0392809b04f0d1a459dfff769f6dcc9ba544ffe48031fa"
-author: "AutoMigrationScript"
-tags: []
-description: ""
----
 ## I. Python Type Hints
 They will be used alot in FastAPI
 
@@ -16,6 +8,6 @@ It is basically context switching, wherein if some function or a particular task
 inputs from a user or from an api, then instead of waiting for that it will complete other work and tasks while it finishes.
 
 This "waiting for some other task or program" to complete, normally refers to I/O operations that are relatively "slow", like waiting for:
-i. the data from the client to be sent through the network.
-ii. the data sent by your program to be received by the client through the network.
-iii. 
+1. the data from the client to be sent through the network.
+2. the data sent by your program to be received by the client through the network.
+3. 

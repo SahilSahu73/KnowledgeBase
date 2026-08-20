@@ -25,7 +25,7 @@ The result is a **three-plane architecture**: a **Control Plane**, a **Data Plan
 ---
 
 ## 2. Decisions locked in this discussion
-
+---
 | Dimension | Decision | Rationale |
 |---|---|---|
 | Tenant model | One OpenBao instance per client | Strong isolation, clean per-client monitoring/billing |
@@ -40,7 +40,6 @@ The result is a **three-plane architecture**: a **Control Plane**, a **Data Plan
 | Client tiers | **Single instance profile for now** (tiering deferred) | Simpler launch; sizing table kept as a future tiering reference |
 | DR / HA | 3-node Raft quorum + automated encrypted snapshots (single India region) | OSS has no replication; snapshot-restore is the DR path |
 | OpenBao version | **v2.5.5 minimum** | Namespace stability/deadlock fixes land in 2.5.x |
-
 ---
 
 ## 3. Why OpenBao OSS is sufficient (and where it is not)

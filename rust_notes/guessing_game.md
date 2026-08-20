@@ -59,3 +59,61 @@ Purpose of these `Result` types is to encode error-handling information.
 
 Values of the `Result` type, have methods defined on them (like values of any type).
 Instance of Result - has an `expect` method that we can call.
+If instance of `Result` is an `Err` value - `expect` will cause program to crash - display the message that was passed as an arg to `expect`.
+If `ok` then expect will take the return value that `ok` is holding and return just that value to us so that we can use it.
+Now if we do not use `expect`, the program will compile but give a warning - unused `Result` that must be used.
+
+## Generating a Secret Number
+The project that we are building is a binary crate, which is an executable.
+The `rand` crate is a library crate, which contains code that is intended to be used in other programs and cant be executed on its own.
+Cargo's coordination of external crates is where Cargo shines. Before we can write code that uses `rand` crate, *Cargo.toml* needs to
+include the `rand` crate as a dependency.
+```rust
+use std::io;
+use rand::Rng;
+
+fn main(){
+    println!("");
+
+    let secret_num = rand::thread_rng().gen_range(1..=100);
+
+    println!("The secret_num generated: {secret_num}");
+    println!("");
+
+    let mut guess = String::new();
+
+    io::stdin()
+      .read_line(&mut guess)
+      .expect("Failed to read line.");
+
+    println!("You guessed: {guess}");
+}
+```
+We added `use rand::Rng` - `Rng` trait defines methods that random number generators implement, and this trait must be in scope for us
+to use those methods.
+`rand::thread_rng` function - random number generator - local to the current thread of execution and is seeded by the OS.
+Then the gen_range() method is called on the random num generator - this method is defined by the `Rng` trait - takes a range expression
+in the form `start..=end` as argument - lower and upper bound inclusive - and generates a random num in that range.
+
+> [!NOTE]
+> We wont know which traits to use or which methods and functions to call from a crate, so each crate has its own documentation with instructions for using it. Running `cargo doc --open` will build documentation provided by all the dependencies locally and open it in the browser.
+
+## Comparing the guess to the secret_num
+```rust
+use std::io;
+use rand::Rng;
+
+use std::cmp::Ordering;
+
+fn main(){
+    // previous same code as above
+    println!("Your guess: {guess}");
+
+    match guess.cmp(&secret_num) {
+        Ordering::Less => println!("Too small"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You Win!!!!"),
+    }
+}
+```
+
